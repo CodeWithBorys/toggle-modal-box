@@ -20,6 +20,10 @@ function closeModal() {
   modal.classList.add('hidden');
 }
 
-window.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeModal();
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (!modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  }
 });
